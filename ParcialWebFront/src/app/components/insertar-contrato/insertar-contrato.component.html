@@ -1,0 +1,39 @@
+<div class="form-container">
+    <h2>Insertar Nuevo Contrato</h2>
+    <form [formGroup]="contratoForm" (ngSubmit)="anadirContrato()">
+        <div>
+            <label for="identificador">Identificador</label>
+            <input id="identificador" formControlName="identificador" type="text" required>
+        </div>
+        <div>
+            <label for="valor">Valor</label>
+            <input id="valor" formControlName="valor" type="number" required>
+        </div>
+        <div>
+            <label for="nombreContratante">Nombre del Contratante</label>
+            <input id="nombreContratante" formControlName="nombreContratante" type="text" required>
+        </div>
+        <div>
+            <label for="documentoContratante">Documento del Contratante</label>
+            <input id="documentoContratante" formControlName="documentoContratante" type="text" required>
+        </div>
+        <div>
+            <label for="nombreContratantista">Nombre del Contratantista</label>
+            <input id="nombreContratantista" formControlName="nombreContratantista" type="text" required>
+        </div>
+        <div>
+            <label for="documentoContratantista">Documento del Contratantista</label>
+            <input id="documentoContratantista" formControlName="documentoContratantista" type="text" required>
+        </div>
+        <div>
+            <label for="fechaInicial">Fecha Inicial</label>
+            <input id="fechaInicial" formControlName="fechaInicial" type="date" required>
+        </div>
+        <div>
+            <label for="fechaFinal">Fecha Final</label>
+            <input id="fechaFinal" formControlName="fechaFinal" type="date" required>
+        </div>
+        <button type="submit" [disabled]="!contratoForm.valid">Añadir Contrato</button>
+    </form>
+    <p>{{ mensaje }}</p>
+</div>
